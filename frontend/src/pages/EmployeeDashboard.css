@@ -1,0 +1,289 @@
+/* Layout Themes */
+.emp-layout {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Dark Theme */
+.emp-layout.dark-theme {
+  background: #000000;
+  color: white;
+}
+
+/* Make header title text and icon white in dark mode */
+.emp-layout.dark-theme .header-title {
+  color: white;
+}
+
+.emp-layout.dark-theme .header-title .anticon {
+  color: white;
+}
+
+/* Light Theme */
+.emp-layout.light-theme {
+  background: #f9f9f9;
+  color: #1e1e2f;
+}
+
+/* Pastel Bubble */
+.emp-layout::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.15), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Header */
+.emp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  padding: 0 40px;
+  height: 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 100;
+  position: sticky;
+  top: 0;
+}
+
+/* Header Title */
+.header-title {
+  font-size: 26px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+
+/* Light Theme Title */
+.emp-layout.light-theme .header-title {
+  color: #1e1e2f;
+}
+
+/* Content */
+.emp-content {
+  padding: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Cards */
+.welcome-card,
+.info-card,
+.perf-chart-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  box-shadow: 0 0 25px rgba(0, 132, 255, 0.4);
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+/* Light Theme Card Text */
+.emp-layout.light-theme .welcome-card,
+.emp-layout.light-theme .info-card,
+.emp-layout.light-theme .perf-chart-card {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1e1e2f;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+/* Dark mode: Make Welcome card text and icons white */
+.emp-layout.dark-theme .welcome-card .ant-typography,
+.emp-layout.dark-theme .welcome-card .anticon {
+  color: white !important;
+}
+
+/* Dark mode: Performance card title to white */
+.emp-layout.dark-theme .perf-chart-card .ant-card-head-title {
+  color: white !important;
+}
+
+/* Dark mode: Chart labels and tooltips text */
+.emp-layout.dark-theme .perf-chart-card canvas {
+  color: white !important;
+}
+
+/* Neon Glow */
+.welcome-card::before,
+.info-card::before,
+.perf-chart-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #00c6ff, #0072ff, #00c6ff);
+  animation: neonGlow 4s infinite linear;
+}
+
+/* Hover Effects */
+.welcome-card:hover,
+.info-card:hover,
+.perf-chart-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 48px rgba(0, 153, 255, 0.3);
+}
+
+/* Welcome Card */
+.welcome-card {
+  text-align: center;
+  padding: 40px 32px;
+  margin-bottom: 40px;
+}
+
+.welcome-card .ant-typography {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+/* Info Cards */
+.info-row {
+  margin-bottom: 40px;
+}
+
+.info-card {
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.info-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+  color: #00c6ff;
+}
+
+.emp-layout.light-theme .info-icon {
+  color: #3b82f6;
+}
+
+.info-card .ant-typography {
+  color: inherit;
+}
+
+.info-card h3.ant-typography {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+/* Chart Section */
+.perf-chart-card {
+  padding: 28px;
+  height: 420px;
+}
+
+.perf-chart-card .ant-card-head-title {
+  font-weight: 600;
+}
+
+/* Buttons */
+.ant-btn {
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.ant-btn-primary {
+  background: linear-gradient(135deg, #00c6ff, #0072ff) !important;
+  border: none !important;
+  color: white !important;
+}
+
+.ant-btn-primary:hover {
+  background: linear-gradient(135deg, #0072ff, #0059b3) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ant-btn-danger {
+  background: transparent !important;
+  border: 1px solid #ef4444 !important;
+  color: #ef4444 !important;
+}
+
+.ant-btn-danger:hover {
+  background: rgba(239, 68, 68, 0.1) !important;
+  color: #f87171 !important;
+}
+
+/* Spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #000;
+}
+
+.loading-spinner .ant-spin-dot-item {
+  background-color: #00c6ff !important;
+}
+
+/* Footer */
+.ant-layout-footer {
+  background: transparent;
+  color: inherit;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px 50px;
+  text-align: center;
+}
+
+/* Chart Shadow */
+.chartjs-render-monitor {
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.25));
+}
+
+/* Neon Glow Keyframes */
+@keyframes neonGlow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .emp-header {
+    padding: 0 24px;
+    height: 72px;
+  }
+
+  .emp-content {
+    padding: 24px;
+  }
+
+  .info-row .ant-col {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .emp-header {
+    flex-direction: column;
+    height: auto;
+    padding: 16px;
+  }
+
+  .header-title {
+    margin-bottom: 12px;
+  }
+
+  .perf-chart-card {
+    height: 300px;
+  }
+}

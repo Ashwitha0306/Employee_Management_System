@@ -1,0 +1,78 @@
+/* src/pages/PerformancePage.css */
+
+.performance-page {
+  padding: 30px;
+  background: linear-gradient(to right, #9bfcff, #e2faff);
+  min-height: 100vh;
+  transition: background 0.4s ease;
+}
+
+.ant-modal-content {
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  animation: fadeInModal 0.3s ease-in-out;
+}
+
+/* Optional: Modal entrance animation */
+@keyframes fadeInModal {
+  from {
+    transform: scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.ant-table {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.ant-table-thead > tr > th {
+  background: #f5f5f5;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Smooth table row transitions */
+.ant-table-tbody > tr {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Disable hover background */
+.no-hover-table .ant-table-tbody > tr:hover > td,
+.no-hover .ant-table-tbody > tr:hover > td {
+  background-color: transparent !important;
+}
+
+/* Disable pointer cursor on row hover */
+.no-hover-table .ant-table-tbody > tr:hover,
+.no-hover .ant-table-tbody > tr:hover {
+  cursor: default !important;
+}
+
+/* Add subtle spacing and styling to form inside modal */
+.ant-form-item-label > label {
+  font-weight: 500;
+  color: #444;
+}
+
+.ant-select-selector {
+  border-radius: 6px !important;
+}
+
+button.ant-btn-primary {
+  background-color: #009688;
+  border-color: #009688;
+  transition: background-color 0.3s ease;
+}
+
+button.ant-btn-primary:hover {
+  background-color: #00796b;
+  border-color: #00796b;
+}

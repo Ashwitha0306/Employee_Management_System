@@ -1,0 +1,137 @@
+/* src/pages/LoginPage.css */
+
+/* DARK THEME FOR LOGIN PAGE */
+body {
+  background-color: #ffffff;
+  color: #f1f1f1;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  background: #1e1e2f;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  text-align: center;
+  color: #f1f1f1;
+}
+
+.login-container h2 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.login-form label {
+  font-weight: 500;
+  color: #ddd;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form input[type="text"] {
+  padding: 10px 12px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 14px;
+  background: #2d2d3a;
+  color: #f1f1f1;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #009688;
+}
+
+.password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-field input {
+  width: 100%;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.eye-icon:hover {
+  color: #fff;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-top: -10px;
+  color: #ccc;
+}
+
+.remember-forgot a {
+  text-decoration: none;
+  color: #00bcd4;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.login-form button {
+  padding: 10px;
+  background-color: #009688;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-form button:hover {
+  background-color: #00796b;
+}
+
+.login-form button:active {
+  transform: scale(0.97);
+  box-shadow: 0 0 0 2px #00796b inset;
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 30px 20px;
+  }
+
+  .login-form label {
+    font-size: 14px;
+  }
+
+  .login-form input {
+    font-size: 13px;
+  }
+
+  .login-form button {
+    font-size: 15px;
+  }
+}

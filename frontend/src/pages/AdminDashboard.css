@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+.admin-dashboard {
+  padding: 24px;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right,#8af5fd, #feffff);
+  background-attachment: fixed;
+}
+
+.dashboard-card {
+  text-align: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 20px 0;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.dashboard-card .icon {
+  font-size: 38px;
+  margin-bottom: 6px;
+}
+
+.icon.blue {
+  color: #00B8D9;
+}
+
+.icon.purple {
+  color: #9C27B0;
+}
+
+.icon.red {
+  color: #FF5252;
+}
+
+.chart-card {
+  height: 320px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.chart-card h3 {
+  color: #333;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.pie-small canvas {
+  max-height: 250px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-card {
+    margin-bottom: 20px;
+  }
+}

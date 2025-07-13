@@ -1,0 +1,62 @@
+/* src/components/layout/DashboardLayout.css */
+
+.logo {
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  background-color: #001529;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+.sidebar {
+  background-color: #001529 !important;
+  overflow: auto;
+}
+
+.site-layout {
+  background: #f5f6fa;
+}
+
+.site-header {
+  background: #ffffff;
+  padding: 0 24px;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  display: flex;
+  align-items: center;
+  height: 64px;
+}
+
+.site-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #001529;
+}
+
+.dashboard-main {
+  margin: 24px;
+  padding: 24px;
+  background: #ffffff;
+  min-height: 360px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(99, 99, 99, 0.1);
+}
+
+/* Optional: style active sidebar link */
+.ant-menu-item-selected {
+  background-color: #1890ff !important;
+  border-radius: 4px;
+}
+
+.ant-menu-item a {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.ant-menu-item-selected a {
+  color: #ffffff !important;
+  font-weight: 600;
+}
